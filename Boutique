@@ -1,0 +1,34 @@
+Create a boutique clothing store database 
+
+CREATE TABLE boutique (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, total_sold INTEGER);
+
+INSERT INTO boutique VALUES (1,"dress",30,15);
+INSERT INTO boutique VALUES (2,"heels",25,10); 
+INSERT INTO boutique VALUES (3,"shirts",20,20);
+INSERT INTO boutique VALUES (4,"earrings",25,12);
+INSERT INTO boutique VALUES (5,"necklaces",23,13);
+INSERT INTO boutique VALUES (6,"handbags",15,5);
+INSERT INTO boutique VALUES (7,"sweaters",40,15);
+INSERT INTO boutique VALUES (8,"leggings",35,20);
+INSERT INTO boutique VALUES (9,"pants",25,23);
+INSERT INTO boutique VALUES (10,"jeans",40,13);
+INSERT INTO boutique VALUES (11,"sunglasses",15,5);
+INSERT INTO boutique VALUES (12,"watches",25,3);
+INSERT INTO boutique VALUES (13,"hats",10,11);
+INSERT INTO boutique VALUES (14,"skirts",25,10);
+INSERT INTO boutique VALUES (15,"belts",15,5); 
+
+--Display the data ordered by the total number sold.
+
+SELECT * FROM boutique 
+ORDER BY total_sold 
+
+--What is the average price of items in the boutique 
+
+SELECT AVG(price) FROM boutique
+
+-- What were the 3 most popular items? 
+SELECT item, price, total_sold
+FROM boutique
+ORDER BY total_sold desc
+limit 3;
